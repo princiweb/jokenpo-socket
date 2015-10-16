@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      .users-connected{
+        position: fixed;
+        width: 300px;
+        right: 15px;
+        top: 15px;
+        border: 2px solid #ddd;
+        min-height: 200px;
+        list-style-type: none;
+        padding: 10px 15px;
+        background: #fff;
+      }
+      .users-connected-title{
+        margin-bottom: 10px
+      }
+    </style>
+  </head>
+  <body>
+
+  <h1 id="resultado"></h1>
+
+  <div id="player-1" class="user-panel">
+    <p>Nome: <span class="nome"></span></p>
+    <p>Pontos: <span class="pontos">0</span></p>
+    <div class="botoes">
+      <button>Pedra</button>
+      <button>Papel</button>
+      <button>Tesoura</button>
+    </div>
+    <div class="jogada"></div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+
+  <div id="player-2" class="user-panel">
+    <p>Nome: <span class="nome"></span></p>
+    <p>Pontos: <span class="pontos">0</span></p>
+    <div class="botoes">
+      <button>Pedra</button>
+      <button>Papel</button>
+      <button>Tesoura</button>
+    </div>
+    <div class="jogada"></div>
+  </div>
+
+  <p id="espera"></p>
+    
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
